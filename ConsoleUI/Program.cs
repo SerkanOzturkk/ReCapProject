@@ -43,10 +43,13 @@ carManager.Add(new Car()
 });*/
 
 
+foreach (var car in carManager.GetCarDetails())
+{
+    Console.WriteLine(car.CarName + " / " + car.BrandName + " / "+ car.ColorName);
+}
 
-
-foreach (var car in carManager.GetAll())
+/*foreach (var car in carManager.GetAll())
 {
     Console.WriteLine(car.CarId+" ----- " + car.CarName + " ----- " + car.Description + " ----- " + car.ModelYear);
-}
+}*/
 

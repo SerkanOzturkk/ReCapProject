@@ -15,7 +15,7 @@ namespace ConsoleUI
 
         static void Main(string[] args)
         {
-            TestCar testCar = new TestCar();
+            //TestCar testCar = new TestCar();
             //testCar.GetAll();
             //testCar.GetByID(1);
             //testCar.Add(new Car{BrandId = 1,CarName = "test1",DailyPrice = 250,ModelYear = "2023",ColorId = 1,Description = "test"});
@@ -23,6 +23,10 @@ namespace ConsoleUI
             //testCar.Delete(new Car { CarId = 9});
             //testCar.GetCarDetails();
             //testCar.GetCarsByBrandId(3);
+
+            
+
+
 
 
 

@@ -2,54 +2,36 @@
 
 using Business.Abstract;
 using Business.Concrete;
+using Business.Test;
 using DataAccess.Concrete.EntityFramework;
 using DataAccess.Concrete.InMemory;
 using Entities.Concrete;
 
 
-CarManager carManager = new CarManager(new EfCarDal());
-
-/*
-carManager.Add(new Car()
+namespace ConsoleUI
 {
-    BrandId = 1,
-    CarName = "Aston Martin",
-    ColorId = 2,
-    DailyPrice = 500,
-    Description = "fancy car",
-    ModelYear = "2020"
-});*/
+    class Program
+    {
 
-/*carManager.Update(new Car()
-{
-    CarId = 6,
-    BrandId = 1,
-    CarName = "test",
-    ColorId = 2,
-    DailyPrice = 500,
-    Description = "fancy car",
-    ModelYear = "2024"
-});*/
-
-/*carManager.Delete(new Car()
-{
-    CarId = 6,
-    BrandId = 1,
-    CarName = "test",
-    ColorId = 2,
-    DailyPrice = 500,
-    Description = "fancy car"
-    
-});*/
+        static void Main(string[] args)
+        {
+            TestCar testCar = new TestCar();
+            //testCar.GetAll();
+            //testCar.GetByID(1);
+            //testCar.Add(new Car{BrandId = 1,CarName = "test1",DailyPrice = 250,ModelYear = "2023",ColorId = 1,Description = "test"});
+            //testCar.Update(new Car { CarId = 9, BrandId = 1, CarName = "asd", DailyPrice = 250, ModelYear = "2024",Description = "test",ColorId = 1});
+            //testCar.Delete(new Car { CarId = 9});
+            //testCar.GetCarDetails();
+            //testCar.GetCarsByBrandId(3);
 
 
-foreach (var car in carManager.GetCarDetails())
-{
-    Console.WriteLine(car.CarName + " / " + car.BrandName + " / "+ car.ColorName);
+
+        }
+
+        
+
+    }
 }
 
-/*foreach (var car in carManager.GetAll())
-{
-    Console.WriteLine(car.CarId+" ----- " + car.CarName + " ----- " + car.Description + " ----- " + car.ModelYear);
-}*/
+
 

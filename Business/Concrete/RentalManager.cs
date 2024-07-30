@@ -37,10 +37,12 @@ namespace Business.Concrete
 
         public IResult Add(Rental rental)
         {
-            /*if (rental.BrandName.Length < 2)
+            var existingRental = _rentalDal.Get(r => r.CarId == rental.CarId && r.ReturnDate >= rental.ReturnDate);
+
+            if (existingRental != null)
             {
-                return new ErrorResult(Messages.CarNameInvalid);
-            }*/
+                return new ErrorResult(Messages.MaintenanceTime);
+            }
             _rentalDal.Add(rental);
 
             return new SuccessResult(Messages.CarAdded);

@@ -1,4 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿// See https://aka.ms/new-console-template for more information.
 
 using Business.Abstract;
 using Business.Concrete;
@@ -24,7 +24,24 @@ namespace ConsoleUI
             //testCar.GetCarDetails();
             //testCar.GetCarsByBrandId(3);
 
-            
+            RentalManager rentalManager = new RentalManager(new EfRentalDal());
+
+            var result = rentalManager.Add(new Rental{CarId = 2,CustomerId = 3,RentDate = new DateTime(2024,7,27),ReturnDate = new DateTime(2023,7,29)});
+
+            var result1 = rentalManager.GetAll();
+
+            if (result1.Success == true)
+            {
+                foreach (var car in result1.Data)
+                {
+                    Console.WriteLine(car.Id + " -  " + car.CarId + " -  " + car.CustomerId
+                                      + " -  " + car.RentDate + " -  " + car.ReturnDate);
+                }
+            }
+            else
+            {
+                Console.WriteLine(result1.Message);
+            }
 
 
 

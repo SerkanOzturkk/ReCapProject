@@ -12,7 +12,7 @@ namespace Business.Test
 {
     public  class TestCar : ITest
     {
-        CarManager carManager = new CarManager(new EfCarDal());
+        CarManager carManager = new CarManager(new EfCarDal(),new BrandManager(new EfBrandDal()));
         public void GetAll()
         {
             var result = carManager.GetAll();

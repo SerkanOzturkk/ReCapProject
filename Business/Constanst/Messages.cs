@@ -9,6 +9,9 @@ namespace Business.Constanst
 {
     public static class Messages
     {
+        public static string CarCountOfBrandError = "Bir markaya ait en fazla 10 araç olabilir";
+        public static string CarNameAlreadyExists = "Aynı isme ait farklı bir araç var";
+        public static string BrandLimitExceded = "Marka sınır aşıldı";
         public static string MaintenanceTime = "Sistem bakımda";
         public static string CarListed = "Araçlar listelendi";
         public static string CarAdded = "Araç Eklendi";
